@@ -1,0 +1,10 @@
+.buttonIcon {
+  min-width: 80%;
+  margin: auto;
+}
+.refreshButton{
+    width: 20%;
+    background-color: #F77D3E;
+    border-color: #F77D3E;
+    flex-grow: 1;
+}

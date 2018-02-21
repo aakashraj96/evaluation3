@@ -1,0 +1,19 @@
+.leftMenu{
+  min-width: 10vh;
+  width: 5%;
+  height:100%;
+  background-color:#2E3A48;
+  display: flex;
+  flex-direction: column;
+}
+.logoText{
+  color: white;
+  text-align: center;
+}
+.logo{
+  flex-grow: 1;
+}
+.icon{
+  margin: 20px;
+  min-width: 40%;
+}
