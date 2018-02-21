@@ -22,7 +22,8 @@ class App extends Component {
           console.log('Nodata');
           this.setState({ pageNumber: 0 });
         } else {
-          console.log('There is data');
+          console.log(json);
+          this.props.updateBooks(json);
           this.setState({ pageNumber: 1 });
         }
       });
@@ -62,10 +63,14 @@ class App extends Component {
   }
 }
 
+
+const mapStateToProps = state => ({
+  books: state.books,
+});
 const mapDispatchToProps = dispatch => ({
   updateBooks: (books) => {
     dispatch(actions.updateBooks('UPDATEBOOKS', books));
   },
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
