@@ -6,6 +6,8 @@ import LeftMenu from './Components/LeftMenu/LeftMenu';
 import RefreshButton from './Components/RefreshButton/RefreshButton';
 import CenterDiv from './Components/CenterDiv/CenterDiv';
 import actions from './redux/actions/';
+import AuthorBlock from './Components/AuthorBlock/AuthorBlock';
+import TopBar from './Components/TopBar/TopBar';
 
 class App extends Component {
   constructor() {
@@ -22,7 +24,7 @@ class App extends Component {
           console.log('Nodata');
           this.setState({ pageNumber: 0 });
         } else {
-          console.log(json);
+          console.log('The books data going to redux store is: ', json);
           this.props.updateBooks(json);
           this.setState({ pageNumber: 1 });
         }
@@ -47,10 +49,21 @@ class App extends Component {
         </div>
       );
     } else if (this.state.pageNumber === 1) {
+      console.log('Books object', Object.keys(this.props.books));
+      const authors = Object.keys(this.props.books).sort((a, b) => {
+        if (a > b) {
+          return 1;
+        }
+
+        return -1;
+      }).map(author => <AuthorBlock authorName={author} key={Date.now()} />);
       return (
         <div className="container">
           <LeftMenu />
-          <MainBody />
+          <MainBody >
+            <TopBar />
+            {authors}
+          </MainBody>
         </div>
       );
     }
@@ -64,9 +77,12 @@ class App extends Component {
 }
 
 
-const mapStateToProps = state => ({
-  books: state.books,
-});
+const mapStateToProps = (state) => {
+  console.log('state is :', state);
+  return {
+    books: state.updater.books,
+  };
+};
 const mapDispatchToProps = dispatch => ({
   updateBooks: (books) => {
     dispatch(actions.updateBooks('UPDATEBOOKS', books));

@@ -5,3 +5,5 @@
   flex-direction: row;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+button:focus {outline:0;}

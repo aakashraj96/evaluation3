@@ -1,0 +1,21 @@
+.booksContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 25px;
+}
+.authorHeading{
+  background-color: #FFFFFF;
+}
+
+.headingFont{
+  font-weight: lighter;
+  font-size: 30px;
+  margin-left: 75px;
+  padding-bottom: 10px;
+}
+
+.authorContainer{
+  background-color: #F77D3E;
+}

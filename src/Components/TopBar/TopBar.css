@@ -1,0 +1,32 @@
+.topBar{
+
+  background-color: #944744;
+  width: 275px;
+  height: 70px;
+  padding-top: 1px;
+  padding-bottom: 20px;
+  border-radius: 0px 0px 13px 0px;
+}
+
+.topText{
+  font-size: 25px;
+  font-weight: 200;
+  color: white;
+  margin-left: 25px;
+
+}
+
+.textHightlight{
+  font-size: 40px;
+  font-weight:300;
+}
+
+.line{
+  color: white;
+  background-color: #BF9392;
+  width: 220px;
+  height: 4px;
+  border-radius: 2px;
+  margin-top: -12px;
+  margin-left: 25px;
+}

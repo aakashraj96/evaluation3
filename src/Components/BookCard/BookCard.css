@@ -1,0 +1,59 @@
+.bookcard{
+    width: 250px;
+  border: solid;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+  border-style: hidden;
+  border-radius:  20px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
+}
+
+.bookImage{
+  width: 250px;
+ height: 150px;
+ object-fit: cover;
+ border-radius: 20px 20px 0px 0px;
+
+}
+
+.cardTitle{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: -6px;
+}
+
+.cardRating{
+  font-size: 30px;
+  font-weight: lighter;
+  margin-top: -6px;
+}
+
+.cardAuthor{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: -8px;
+}
+.cardContent{
+  margin: 10px;
+}
+
+.likeButton{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  /* background-color: #D23426; */
+  /* background-color: #7B7B7B; */
+  margin-top: -8%;
+  margin-left:75%;
+  border-style: none;
+  box-shadow: -1px 0px 1px 0px rgba(0, 0, 0, 0.6);
+}
+
+
+
+.buttonIcon{
+  width: 80%;
+}
